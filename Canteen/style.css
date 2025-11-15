@@ -1,0 +1,860 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    transition: opacity 0.6s ease;
+}
+
+/* 页面加载动画 */
+body.loading {
+    opacity: 0;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* 主内容加载动画 */
+.main-content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.main-content.content-loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 顶部导航栏样式 */
+.header {
+    background-color: #fff;
+    padding: 12px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s;
+}
+
+.header:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 25px;
+    padding: 5px 15px;
+    transition: background-color 0.3s;
+}
+
+.search-bar:focus-within {
+    background-color: #eaeaea;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 180px;
+    transition: width 0.3s;
+}
+
+.search-input:focus {
+    width: 220px;
+}
+
+/* 搜索动画效果 */
+.search-input.searching {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu-btn:hover {
+    background-color: #e0e0e0;
+    color: #333;
+    transition: all 0.2s ease;
+}
+
+/* 按钮点击动画 */
+.btn-clicked {
+    transform: scale(0.9);
+    transition: transform 0.2s ease;
+}
+
+/* 返回顶部按钮样式 */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #1890ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #40a9ff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(24, 144, 255, 0.5);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
+}
+
+/* 分类导航样式 */
+.category-nav {
+    background-color: #fff;
+    margin-top: 15px;
+    padding: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.category-list {
+    display: flex;
+    list-style: none;
+    overflow-x: auto;
+    padding: 0 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.category-list::-webkit-scrollbar {
+    display: none;
+}
+
+.category-item {
+    padding: 8px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.category-item:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+.category-item.active {
+    background-color: #e6f7ff;
+    color: #1890ff;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* 触摸反馈效果 */
+.category-item.touch-active {
+    background-color: #e0e0e0;
+    transform: scale(0.95);
+    transition: all 0.1s ease;
+}
+
+/* 餐桌网格布局 */
+.table-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+    margin-top: 15px;
+    padding-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+/* 分类切换过渡效果 */
+.table-grid.category-transition {
+    transition: opacity 0.2s ease;
+}
+
+/* 餐桌卡片样式 */
+.table-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.table-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 普通餐桌卡片样式 */
+.table-card:not(.special-card) {
+    border: 1px solid #f0f0f0;
+}
+
+/* 特殊活动卡片样式 */
+.special-card {
+    border: 1px solid #ffe58f;
+    background: linear-gradient(135deg, #fffbe6 0%, #fff 100%);
+}
+
+/* 罗大壮餐厅卡片样式 */
+.luo-dazhuang-card {
+    border: 2px solid #A67C52;
+    overflow: visible;
+}
+
+.luo-dazhuang-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.luo-dazhuang-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.luo-dazhuang-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.luo-dazhuang-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.luo-dazhuang-qrcode {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.table-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
+}
+
+.table-info {
+    padding: 12px 15px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 0 0 12px 12px;
+}
+
+.special-card .table-info {
+    background: linear-gradient(135deg, #fffbe6 0%, #fff 100%);
+}
+
+.table-number {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    padding: 4px 0;
+}
+
+/* 餐桌卡片悬停时的文字效果 */
+.table-card:hover .table-number {
+    color: #1890ff;
+}
+
+/* 响应式设计 */
+/* 平板设备 */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .search-bar {
+        flex: 1;
+        margin-right: 10px;
+    }
+    
+    .search-input {
+        width: 100%;
+    }
+    
+    .search-input:focus {
+        width: 100%; /* 移动端不需要宽度变化 */
+    }
+    
+    /* 统一餐厅的网格布局 */
+    .table-grid { 
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+    
+    .table-image {
+        height: 140px;
+    }
+    
+    .table-info {
+        padding: 10px 12px;
+    }
+    
+    .table-number {
+        font-size: 13px;
+    }
+    
+    /* 罗大壮餐厅卡片在平板上的调整 */
+    .luo-dazhuang-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .luo-dazhuang-qrcode img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+}
+
+/* 大屏手机 */
+@media (max-width: 640px) {
+    .header {
+        padding: 10px 0;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    /* 统一餐厅的网格布局 */
+    .table-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    .table-image {
+        height: 120px;
+    }
+    
+    .category-item {
+        padding: 6px 16px;
+        font-size: 13px;
+    }
+    
+    /* 罗大壮餐厅卡片在大屏手机上的调整 */
+    .luo-dazhuang-content {
+        height: 280px !important;
+        padding: 12px !important;
+    }
+    
+    .luo-dazhuang-left p:first-child {
+        font-size: 16px !important;
+    }
+    
+    .luo-dazhuang-left p:last-child {
+        font-size: 28px !important;
+    }
+    
+    .luo-dazhuang-qrcode img {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .luo-dazhuang-footer p {
+        font-size: 12px !important;
+    }
+    
+    .luo-dazhuang-footer svg {
+        width: 14px !important;
+        height: 14px !important;
+    }
+    
+    .luo-dazhuang-footer div div p {
+        font-size: 11px !important;
+    }
+}
+
+/* 二维码弹窗样式 */
+.qr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+}
+
+.qr-modal-content {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.qr-modal-content h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.qr-modal-content img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    max-width: 100%;
+}
+
+.qr-modal-content p {
+    margin-top: 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+.close-btn {
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #1890ff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.close-btn:hover {
+    background: #40a9ff;
+}
+
+.close-btn:active {
+    transform: scale(0.95);
+}
+
+/* 罗大壮餐厅特殊弹窗样式 */
+.qr-modal-content.luo-dazhuang-modal {
+    background: #D29966;
+    color: white;
+    max-width: 600px;
+}
+
+/* 移动端响应式设计 */
+@media (max-width: 600px) {
+    .qr-modal-content.luo-dazhuang-modal {
+        max-width: 90%;
+        padding: 20px;
+    }
+    
+    /* 切换为垂直布局 */
+    .qr-modal-content.luo-dazhuang-modal > div:first-child {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* 调整桌号大小 */
+    .qr-modal-content.luo-dazhuang-modal div:first-child div:nth-child(2) {
+        font-size: 40px !important;
+        margin: 10px 0;
+    }
+    
+    /* 调整二维码大小 */
+    .qr-modal-content.luo-dazhuang-modal img {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    /* 调整Wi-Fi图标大小 */
+    .qr-modal-content.luo-dazhuang-modal svg {
+        width: 18px !important;
+        height: 18px !important;
+    }
+    
+    /* 调整文本大小 */
+    .qr-modal-content.luo-dazhuang-modal p {
+        font-size: 12px !important;
+    }
+    
+    /* 调整关闭按钮大小 */
+    .qr-modal-content.luo-dazhuang-modal .close-btn {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
+
+.qr-modal-content.luo-dazhuang-modal h3 {
+    color: white;
+    font-size: 28px;
+}
+
+.qr-modal-content.luo-dazhuang-modal img {
+    width: 300px;
+    height: 300px;
+    border: none;
+}
+
+/* 小屏手机 */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .title {
+        font-size: 20px;
+    }
+    
+    .search-input {
+        font-size: 13px;
+    }
+    
+    /* 为罗大壮餐厅在小屏手机上调整网格布局 */
+    .table-grid[data-category="罗大壮"] {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    /* 普通餐厅的网格布局 */
+    .table-grid:not([data-category="罗大壮"]) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .table-image {
+        height: 110px;
+    }
+    
+    .table-info {
+        padding: 8px 10px;
+    }
+    
+    .table-number {
+        font-size: 12px;
+        padding: 2px 0;
+    }
+    
+    .category-list {
+        padding: 0 10px;
+    }
+    
+    .category-item {
+        padding: 5px 12px;
+        font-size: 12px;
+        margin-right: 8px;
+    }
+    
+    /* 罗大壮餐厅卡片在小屏手机上的调整 */
+    .luo-dazhuang-content {
+        height: 260px !important;
+        padding: 10px !important;
+    }
+    
+    .luo-dazhuang-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .luo-dazhuang-left p:first-child {
+        font-size: 14px !important;
+    }
+    
+    .luo-dazhuang-left p:last-child {
+        font-size: 24px !important;
+    }
+    
+    .luo-dazhuang-qrcode {
+        padding: 8px !important;
+    }
+    
+    .luo-dazhuang-qrcode img {
+        width: 90px !important;
+        height: 90px !important;
+    }
+    
+    .luo-dazhuang-footer p {
+        font-size: 11px !important;
+    }
+    
+    .luo-dazhuang-footer svg {
+        width: 12px !important;
+        height: 12px !important;
+    }
+    
+    .luo-dazhuang-footer div {
+        gap: 5px;
+    }
+    
+    .luo-dazhuang-footer div div p {
+        font-size: 10px !important;
+    }
+}
+
+/* 返回顶部按钮的响应式调整 */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .back-to-top {
+        bottom: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+    .header-content {
+        gap: 12px;
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+    
+    .table-image {
+        height: 100px;
+    }
+    
+    .table-number {
+        font-size: 11px;
+    }
+/* 横屏模式优化 */
+@media (orientation: landscape) and (max-height: 480px) {
+    .header {
+        padding: 8px 0;
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+    
+    /* 为罗大壮餐厅在横屏模式下调整网格布局 */
+    .table-grid[data-category="罗大壮"] {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px;
+    }
+    
+    /* 普通餐厅的网格布局 */
+    .table-grid:not([data-category="罗大壮"]) {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .table-image {
+        height: 100px;
+    }
+    
+    /* 罗大壮餐厅卡片在横屏模式下的调整 */
+    .luo-dazhuang-content {
+        height: 220px !important;
+        padding: 8px !important;
+    }
+    
+    .luo-dazhuang-left p:first-child {
+        font-size: 12px !important;
+    }
+    
+    .luo-dazhuang-left p:last-child {
+        font-size: 20px !important;
+    }
+    
+    .luo-dazhuang-qrcode img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    
+    .luo-dazhuang-footer p,
+    .luo-dazhuang-footer div div p {
+        font-size: 10px !important;
+    }
+}
+
+/* 加载和错误消息样式 */
+.loading-message,
+.error-message {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 16px;
+    color: #666;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.loading-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.loading-message::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #1890ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error-message {
+    color: #ff4d4f;
+    background-color: #fff2f0;
+    border: 1px solid #ffccc7;
+}
+
+/* 二维码链接样式 */
+.table-url {
+    font-size: 12px;
+    color: #666;
+    margin: 4px 0 0 0;
+    opacity: 0.8;
+}
+
+.table-card:hover .table-url {
+    color: #1890ff;
+    opacity: 1;
+}
+
+/* 横屏模式优化 */
+@media (orientation: landscape) and (max-height: 480px) {
+    .header {
+        padding: 8px 0;
+    }
+    
+    .title {
+        font-size: 18px;
+    }
+    
+    .table-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 8px;
+    }
+    
+    .table-image {
+        height: 100px;
+    }
+}
