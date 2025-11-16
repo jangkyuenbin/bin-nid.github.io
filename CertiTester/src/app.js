@@ -91,7 +91,8 @@ window.loadBank = async function(bankName) {
         window.saveStateToCookie();
 
         // 更新UI
-        document.getElementById('currentBank').textContent = getBankName(bankName);
+        const bankDisplayName = await getBankName(bankName);
+        document.getElementById('currentBank').textContent = bankDisplayName;
         document.getElementById('totalQuestions').textContent = window.questions.length;
         document.getElementById('totalQuestionsNav').textContent = window.questions.length;
         
@@ -112,7 +113,7 @@ window.loadBank = async function(bankName) {
         document.getElementById('loadingIndicator').style.display = 'none';
         document.getElementById('questionContent').style.display = 'block';
 
-        showToast(`已加载 ${getBankName(bankName)}`);
+        showToast(`已加载 ${bankDisplayName}`);
         console.log('🔍 loadBank 执行完成');
     } catch (error) {
         console.error('加载题库失败:', error);
@@ -926,6 +927,57 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
+// 动态加载题库列表
+window.loadBankList = async function() {
+    try {
+        const response = await fetch('./static/bank/bank.json');
+        if (!response.ok) {
+            throw new Error('无法加载题库列表');
+        }
+        
+        const bankData = await response.json();
+        const bankSelect = document.getElementById('bankSelect');
+        
+        if (!bankSelect) {
+            console.error('题库选择下拉菜单不存在');
+            return;
+        }
+        
+        // 清空现有选项
+        bankSelect.innerHTML = '';
+        
+        // 添加题库选项
+        Object.keys(bankData).forEach(bankKey => {
+            const option = document.createElement('option');
+            option.value = bankKey;
+            option.textContent = bankData[bankKey].bank_name;
+            bankSelect.appendChild(option);
+        });
+        
+        console.log('题库列表加载完成，共加载', Object.keys(bankData).length, '个题库');
+        return bankData;
+    } catch (error) {
+        console.error('加载题库列表失败:', error);
+        // 如果加载失败，使用默认的题库选项
+        const bankSelect = document.getElementById('bankSelect');
+        if (bankSelect) {
+            bankSelect.innerHTML = `
+                <option value="general">综合题库</option>
+                <option value="acp_ai_pro_single">ACP 人工智能高级(单选题)</option>
+                <option value="acp_ai_pro_multi">ACP 人工智能高级(多选题)</option>
+                <option value="aws_mls_c01_all_deepseek">AWS-MLS(C01) DeepSeek</option>
+                <option value="aws_mls_c01_all">AWS-MLS(C01) ALL</option>
+                <option value="aws_mls_c01_all_doubao">AWS-MLS(C01) DouBao</option>
+                <option value="acp_ai_pro_single_example">ACP 人工智能高级(单选题) Example</option>
+                <option value="aws_mls_c01_example">AWS-MLS(C01) Example</option>
+                <option value="acp_ai_pro_errors">ACP 人工智能高级(错题集)</option>
+                <option value="acp_ai_pro_numbers">ACP 人工智能高级(数字)</option>
+            `;
+        }
+        return null;
+    }
+};
+
 // 初始化
 document.addEventListener('DOMContentLoaded', function () {
     // 从cookie加载状态
@@ -1009,34 +1061,37 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('autoSubmitSingle').checked = window.autoSubmitSingle;
     document.getElementById('langText').textContent = window.currentLanguage === 'zhcn' ? '中/EN' : 'EN/中';
     
-    // 如果有保存的题库，更新下拉菜单选中状态
-    if (window.currentBank && document.getElementById('bankSelect')) {
-        document.getElementById('bankSelect').value = window.currentBank;
-        console.log('🔍 初始化: 下拉菜单值设置为:', window.currentBank, '实际值:', document.getElementById('bankSelect').value);
-    } else {
-        console.log('🔍 初始化: 没有保存的题库或下拉菜单不存在');
-    }
-    
-    // 更新模式选择器状态
-    const modeSelect = document.getElementById('modeSelect');
-    if (modeSelect) {
-        // 考试模式状态不进行持久化，刷新页面后强制设置为练习模式
-        if (window.isStudyMode) {
-            modeSelect.value = 'study';
-            document.getElementById('statsPanel').style.display = 'none';
+    // 动态加载题库列表
+    window.loadBankList().then((bankData) => {
+        // 如果有保存的题库，更新下拉菜单选中状态
+        if (window.currentBank && document.getElementById('bankSelect')) {
+            document.getElementById('bankSelect').value = window.currentBank;
+            console.log('🔍 初始化: 下拉菜单值设置为:', window.currentBank, '实际值:', document.getElementById('bankSelect').value);
         } else {
-            modeSelect.value = 'practice';
-            document.getElementById('statsPanel').style.display = 'block';
+            console.log('🔍 初始化: 没有保存的题库或下拉菜单不存在');
         }
-    }
-    
-    // 如果不是考试模式且有保存的题库，则加载它
-    if (!window.isExamMode && window.currentBank) {
-        window.loadBank(window.currentBank);
-    } else if (!window.isExamMode) {
-        // 默认加载综合题库
-        window.loadBank('general');
-    }
+        
+        // 更新模式选择器状态
+        const modeSelect = document.getElementById('modeSelect');
+        if (modeSelect) {
+            // 考试模式状态不进行持久化，刷新页面后强制设置为练习模式
+            if (window.isStudyMode) {
+                modeSelect.value = 'study';
+                document.getElementById('statsPanel').style.display = 'none';
+            } else {
+                modeSelect.value = 'practice';
+                document.getElementById('statsPanel').style.display = 'block';
+            }
+        }
+        
+        // 如果不是考试模式且有保存的题库，则加载它
+        if (!window.isExamMode && window.currentBank) {
+            window.loadBank(window.currentBank);
+        } else if (!window.isExamMode) {
+            // 默认加载综合题库
+            window.loadBank('general');
+        }
+    });
     
     // 监听状态变化事件
     window.addEventListener('beforeunload', window.saveStateToCookie);

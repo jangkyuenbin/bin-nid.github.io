@@ -1,13 +1,35 @@
 // 题库管理服务
 
+// 缓存题库数据
+let bankDataCache = null;
+
 /**
  * 获取题库名称
  * @param {string} bankName 题库标识
  * @returns {string} 题库显示名称
  */
-export function getBankName(bankName) {
-    const names = {
-        general: '综合题库 Example',
+export async function getBankName(bankName) {
+    // 如果缓存中有数据，直接使用缓存
+    if (bankDataCache && bankDataCache[bankName]) {
+        return bankDataCache[bankName].bank_name;
+    }
+    
+    // 尝试从 JSON 文件加载题库数据
+    try {
+        const response = await fetch('./static/bank/bank.json');
+        if (response.ok) {
+            bankDataCache = await response.json();
+            if (bankDataCache[bankName]) {
+                return bankDataCache[bankName].bank_name;
+            }
+        }
+    } catch (error) {
+        console.warn('无法加载题库列表，使用默认名称:', error);
+    }
+    
+    // 如果 JSON 文件中没有找到，使用默认的题库名称映射
+    const defaultNames = {
+        general: '综合题库',
         aws_mls_c01_example: 'AWS-MLS(C01) Example',
         aws_mls_c01_all: 'AWS-MLS(C01) ALL',
         aws_mls_c01_all_doubao: 'AWS-MLS(C01) DouBao',
@@ -16,9 +38,14 @@ export function getBankName(bankName) {
         acp_ai_pro_numbers: 'ACP 人工智能高级(数字)',
         acp_ai_pro_errors: 'ACP 人工智能高级(错题集)',
         acp_ai_pro_single_example: 'ACP 人工智能高级(单选题) Example',
-        acp_ai_pro_multi: 'ACP 人工智能高级(多选题)'
+        acp_ai_pro_multi: 'ACP 人工智能高级(多选题)',
+        acp_ai_pro_error: 'ACP 人工智能高级(错题集)',
+        acp_ai_pro_number: 'ACP 人工智能高级(数字)',
+        aws_mls_c01_single: 'AWS-MLS(C01)(单选题)',
+        aws_mls_c01_multi: 'AWS-MLS(C01)(多选题)'
     };
-    return names[bankName] || '未知题库';
+    
+    return defaultNames[bankName] || '未知题库';
 }
 
 /**
@@ -97,21 +124,36 @@ export function hasMissedOptions(question, userAnswer) {
  */
 export async function loadBankData(bankName) {
     try {
+        // 首先尝试从 JSON 文件获取题库路径
+        if (!bankDataCache) {
+            const response = await fetch('./static/bank/bank.json');
+            if (response.ok) {
+                bankDataCache = await response.json();
+            }
+        }
+        
         let response = null;
-        if (bankName.toLowerCase().includes('aws')) {
-            if (bankName.toLowerCase().includes('mls')) {
-                response = await fetch(`./static/AWS/MLS/${bankName}.json`);
-            } else {
-                response = await fetch(`./static/AWS/${bankName}.json`);
-            }
-        } else if (bankName.toLowerCase().includes('acp')) {
-            if (bankName.toLowerCase().includes('ai_pro')) {
-                response = await fetch(`./static/ACP/AIPRO/${bankName}.json`);
-            } else {
-                response = await fetch(`./static/ACP/${bankName}.json`);
-            }
+        
+        // 如果缓存中有题库数据，使用指定的路径
+        if (bankDataCache && bankDataCache[bankName]) {
+            response = await fetch(bankDataCache[bankName].bank_file);
         } else {
-            response = await fetch(`./static/${bankName}.json`);
+            // 回退到原来的硬编码路径逻辑
+            if (bankName.toLowerCase().includes('aws')) {
+                if (bankName.toLowerCase().includes('mls')) {
+                    response = await fetch(`./static/AWS/MLS/${bankName}.json`);
+                } else {
+                    response = await fetch(`./static/AWS/${bankName}.json`);
+                }
+            } else if (bankName.toLowerCase().includes('acp')) {
+                if (bankName.toLowerCase().includes('ai_pro')) {
+                    response = await fetch(`./static/ACP/AIPRO/${bankName}.json`);
+                } else {
+                    response = await fetch(`./static/ACP/${bankName}.json`);
+                }
+            } else {
+                response = await fetch(`./static/${bankName}.json`);
+            }
         }
 
         if (!response.ok) {

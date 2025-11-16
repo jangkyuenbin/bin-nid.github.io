@@ -1,0 +1,38 @@
+{
+  "general": {
+    "bank_name": "综合题库",
+    "bank_file": "./static/bank/datas/Other/general.json"
+  },
+  "acp_ai_pro_single": {
+    "bank_name": "ACP 人工智能高级(单选题)",
+    "bank_file": "./static/bank/datas/ACP/AIPRO/single.json"
+  },
+  "acp_ai_pro_multi": {
+    "bank_name": "ACP 人工智能高级(多选题)",
+    "bank_file": "./static/bank/datas/ACP/AIPRO/multi.json"
+  },
+  "acp_ai_pro_error": {
+    "bank_name": "ACP 人工智能高级(错题集)",
+    "bank_file": "./static/bank/datas/ACP/AIPRO/error.json"
+  },
+  "acp_ai_pro_number": {
+    "bank_name": "ACP 人工智能高级(数字)",
+    "bank_file": "./static/bank/datas/ACP/AIPRO/number.json"
+  },
+  "aws_mls_c01_single": {
+    "bank_name": "AWS-MLS(C01)(单选题)",
+    "bank_file": "./static/bank/datas/AWS/MLS/single.json"
+  },
+  "aws_mls_c01_multi": {
+    "bank_name": "AWS-MLS(C01)(多选题)",
+    "bank_file": "./static/bank/datas/AWS/MLS/single.json"
+  },
+  "aws_mls_c01_single_deepseek": {
+    "bank_name": "AWS-MLS(C01)(单选题-DS解析)",
+    "bank_file": "./static/bank/datas/AWS/MLS/single_deepseek.json"
+  },
+  "aws_mls_c01_multi_deepseek": {
+    "bank_name": "AWS-MLS(C01)(多选题-DS解析)",
+    "bank_file": "./static/bank/datas/AWS/MLS/single_deepseek.json"
+  }
+}
