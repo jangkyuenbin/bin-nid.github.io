@@ -31,6 +31,10 @@
     "bank_name": "AWS-MLS(C01)(单选题-DS解析)",
     "bank_file": "./static/bank/datas/AWS/MLS/single_deepseek.json"
   },
+  "aws_mls_c01_single_fix_deepseek": {
+    "bank_name": "AWS-MLS(C01)(单选题-DS解析-纠正版)",
+    "bank_file": "./static/bank/datas/AWS/MLS/single_fix_deepseek.json"
+  },
   "aws_mls_c01_multi_deepseek": {
     "bank_name": "AWS-MLS(C01)(多选题-DS解析)",
     "bank_file": "./static/bank/datas/AWS/MLS/single_deepseek.json"
