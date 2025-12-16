@@ -15,7 +15,7 @@
       },
       {
         "option_text": {
-          "zhcn": "AWS健康服务",
+          "zhcn": "AWS Health",
           "enus": "AWS Health"
         },
         "option_flag": false
@@ -29,7 +29,7 @@
       },
       {
         "option_text": {
-          "zhcn": "亚马逊云监控",
+          "zhcn": "Amazon CloudWatch",
           "enus": "Amazon CloudWatch"
         },
         "option_flag": true
@@ -172,7 +172,7 @@
       },
       {
         "option_text": {
-          "zhcn": "验证通道用于标识亚马逊S3存储桶中验证数据所在的位置。",
+          "zhcn": "验证通道用于标识Amazon S3存储桶中验证数据所在的位置。",
           "enus": "The validation channel identifying the location of validation data on an Amazon S3 bucket."
         },
         "option_flag": false
@@ -300,7 +300,7 @@
       },
       {
         "option_text": {
-          "zhcn": "将初始网络代码下载并利用apt-get安装至亚马逊EC2实例，随后将该实例配置为Amazon SageMaker平台中的Jupyter笔记本运行环境。",
+          "zhcn": "将初始网络代码下载并利用apt-get安装至Amazon EC2实例，随后将该实例配置为Amazon SageMaker平台中的Jupyter笔记本运行环境。",
           "enus": "Download and apt-get install the inception network code into an Amazon EC2 instance and use this instance as a Jupyter notebook in  Amazon SageMaker."
         },
         "option_flag": false
@@ -507,7 +507,7 @@
       },
       {
         "option_text": {
-          "zhcn": "亚马逊S3",
+          "zhcn": "Amazon S3",
           "enus": "Amazon S3"
         },
         "option_flag": true
@@ -529,14 +529,14 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "AWS数据迁移服务",
+          "zhcn": "AWS DMS",
           "enus": "AWS DMS"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "亚马逊Kinesis",
+          "zhcn": "Amazon Kinesis",
           "enus": "Amazon Kinesis"
         },
         "option_flag": true
@@ -557,7 +557,7 @@
       },
       {
         "option_text": {
-          "zhcn": "亚马逊西班牙",
+          "zhcn": "Amazon ES",
           "enus": "Amazon ES"
         },
         "option_flag": false
@@ -686,14 +686,14 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "“Alexa商务助手”",
+          "zhcn": "Alexa for Business",
           "enus": "Alexa for Business"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "亚马逊云联络中心",
+          "zhcn": "Amazon Connect",
           "enus": "Amazon Connect"
         },
         "option_flag": false
@@ -707,21 +707,21 @@
       },
       {
         "option_text": {
-          "zhcn": "亚马逊波利",
+          "zhcn": "Amazon Polly",
           "enus": "Amazon Polly"
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "亚马逊理解服务",
+          "zhcn": "Amazon Comprehend",
           "enus": "Amazon Comprehend"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "亚马逊转录服务",
+          "zhcn": "Amazon Transcribe",
           "enus": "Amazon Transcribe"
         },
         "option_flag": true
@@ -893,21 +893,21 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "“专一性”",
+          "zhcn": "Specificity",
           "enus": "Specificity"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "误报率",
+          "zhcn": "误报率(False positive rate)",
           "enus": "False positive rate"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "精准",
+          "zhcn": "Accuracy",
           "enus": "Accuracy"
         },
         "option_flag": false
@@ -921,7 +921,7 @@
       },
       {
         "option_text": {
-          "zhcn": "真阳性率",
+          "zhcn": "真阳性率(True positive rate)",
           "enus": "True positive rate"
         },
         "option_flag": true
@@ -943,42 +943,42 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "通过AWS PrivateLink支持的VPC接口端点连接至SageMaker。",
+          "zhcn": "通过使用由AWS PrivateLink提供支持的VPC接口端点连接SageMaker。",
           "enus": "Connect to SageMaker by using a VPC interface endpoint powered by AWS PrivateLink."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "利用SCPs限制对SageMaker的访问权限。",
+          "zhcn": "使用SCPs（服务控制策略）限制对SageMaker的访问。",
           "enus": "Use SCPs to restrict access to SageMaker."
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "在SageMaker笔记本实例中禁用根用户访问权限。",
+          "zhcn": "在SageMaker笔记本实例上禁用root访问。",
           "enus": "Disable root access on the SageMaker notebook instances."
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "为训练任务和模型启用网络隔离。",
+          "zhcn": "为训练作业和模型启用网络隔离。",
           "enus": "Enable network isolation for training jobs and models."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "将笔记本预签名链接的使用范围限定于公司指定的IP地址。",
+          "zhcn": "将笔记本预签名URL限制在公司使用的特定IP范围内。",
           "enus": "Restrict notebook presigned URLs to specific IPs used by the company."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "对静态存储与动态传输中的数据均实施加密保护，并运用AWS密钥管理服务（AWS KMS）统一管理加密密钥。",
+          "zhcn": "通过静态和传输中加密保护数据，并使用AWS密钥管理服务（AWS KMS）管理加密密钥。",
           "enus": "Protect data with encryption at rest and in transit. Use AWS Key Management Service (AWS KMS) to manage encryption keys."
         },
         "option_flag": false
@@ -1045,7 +1045,7 @@
     "id": "156",
     "question": {
       "enus": "A company supplies wholesale clothing to thousands of retail stores. A data scientist must create a model that predicts the daily sales volume for each item for each store. The data scientist discovers that more than half of the stores have been in business for less than 6 months. Sales data is highly consistent from week to week. Daily data from the database has been aggregated weekly, and weeks with no sales are omitted from the current dataset. Five years (100 MB) of sales data is available in Amazon S3. Which factors will adversely impact the performance of the forecast model to be developed, and which actions should the data scientist take to mitigate them? (Choose two.) ",
-      "zhcn": "一家公司向数千家零售门店供应服装批发业务。某数据科学家需构建一个模型，用于预测各门店每款商品的日销售量。该科学家发现，超过半数的门店开业时间不足六个月。销售数据在周与周之间呈现高度一致性。数据库中的每日数据已按周进行汇总，且当前数据集中已剔除无销售记录的周次。亚马逊S3平台存有五年累计100MB的销售数据。哪些因素会对拟开发的预测模型性能产生不利影响？数据科学家应采取哪两项措施来缓解这些影响？（请选择两项）"
+      "zhcn": "一家公司向数千家零售门店供应服装批发业务。某数据科学家需构建一个模型，用于预测各门店每款商品的日销售量。该科学家发现，超过半数的门店开业时间不足六个月。销售数据在周与周之间呈现高度一致性。数据库中的每日数据已按周进行汇总，且当前数据集中已剔除无销售记录的周次。Amazon S3平台存有五年累计100MB的销售数据。哪些因素会对拟开发的预测模型性能产生不利影响？数据科学家应采取哪两项措施来缓解这些影响？（请选择两项）"
     },
     "option": [
       {
@@ -1078,7 +1078,7 @@
       },
       {
         "option_text": {
-          "zhcn": "目前亚马逊S3中仅有100MB销售数据可用。需申请获取长达十年的销售数据，这将为模型提供200MB的训练数据。",
+          "zhcn": "目前Amazon S3中仅有100MB销售数据可用。需申请获取长达十年的销售数据，这将为模型提供200MB的训练数据。",
           "enus": "Only 100 MB of sales data is available in Amazon S3. Request 10 years of sales data, which would provide 200 MB of training data for  the model."
         },
         "option_flag": false
@@ -1095,7 +1095,7 @@
     "id": "157",
     "question": {
       "enus": "An ecommerce company is automating the categorization of its products based on images. A data scientist has trained a computer vision model using the Amazon SageMaker image classification algorithm. The images for each product are classified according to specific product lines. The accuracy of the model is too low when categorizing new products. All of the product images have the same dimensions and are stored within an Amazon S3 bucket. The company wants to improve the model so it can be used for new products as soon as possible. Which steps would improve the accuracy of the solution? (Choose three.) ",
-      "zhcn": "一家电商公司正致力于根据商品图片实现产品分类的自动化。数据科学家运用Amazon SageMaker平台的图像分类算法，训练出计算机视觉模型。每件商品的图像均按特定产品线进行分类。但在对新商品进行分类时，该模型的准确率始终不尽如人意。所有商品图像尺寸统一，并存储于亚马逊S3存储桶中。公司希望尽快优化模型以适用于新品分类。下列哪三项措施能有效提升该解决方案的准确率？"
+      "zhcn": "一家电商公司正致力于根据商品图片实现产品分类的自动化。数据科学家运用Amazon SageMaker平台的图像分类算法，训练出计算机视觉模型。每件商品的图像均按特定产品线进行分类。但在对新商品进行分类时，该模型的准确率始终不尽如人意。所有商品图像尺寸统一，并存储于Amazon S3存储桶中。公司希望尽快优化模型以适用于新品分类。下列哪三项措施能有效提升该解决方案的准确率？"
     },
     "option": [
       {
@@ -1309,7 +1309,7 @@
     "id": "170",
     "question": {
       "enus": "A retail company is selling products through a global online marketplace. The company wants to use machine learning (ML) to analyze customer feedback and identify specific areas for improvement. A developer has built a tool that collects customer reviews from the online marketplace and stores them in an Amazon S3 bucket. This process yields a dataset of 40 reviews. A data scientist building the ML models must identify additional sources of data to increase the size of the dataset. Which data sources should the data scientist use to augment the dataset of reviews? (Choose three.) ",
-      "zhcn": "一家零售企业正通过全球在线商城销售产品。该公司希望运用机器学习技术分析客户反馈，以确定需要改进的具体环节。开发人员已构建工具，从在线商城采集客户评价并存储至亚马逊S3存储桶，初步获得包含40条评论的数据集。为扩充数据集规模，机器学习模型构建者需寻找更多数据源。下列哪些数据源可用于增强评论数据集？（请选择三项）"
+      "zhcn": "一家零售企业正通过全球在线商城销售产品。该公司希望运用机器学习技术分析客户反馈，以确定需要改进的具体环节。开发人员已构建工具，从在线商城采集客户评价并存储至Amazon S3存储桶，初步获得包含40条评论的数据集。为扩充数据集规模，机器学习模型构建者需寻找更多数据源。下列哪些数据源可用于增强评论数据集？（请选择三项）"
     },
     "option": [
       {
@@ -1578,7 +1578,7 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "“IP洞察”",
+          "zhcn": "IP Insights",
           "enus": "IP Insights"
         },
         "option_flag": true
@@ -1623,7 +1623,7 @@
     "id": "190",
     "question": {
       "enus": "A healthcare company is using an Amazon SageMaker notebook instance to develop machine learning (ML) models. The company's data scientists will need to be able to access datasets stored in Amazon S3 to train the models. Due to regulatory requirements, access to the data from instances and services used for training must not be transmitted over the internet. Which combination of steps should an ML specialist take to provide this access? (Choose two.) ",
-      "zhcn": "一家医疗公司正借助Amazon SageMaker笔记本来开发机器学习模型。为确保数据科学家能够访问存储在亚马逊S3中用于训练模型的数据集，同时遵循监管要求（训练所用实例与服务的数据传输不得经由互联网），机器学习专家应采取哪两项措施实现此目标？（请选择两项）"
+      "zhcn": "一家医疗公司正借助Amazon SageMaker笔记本来开发机器学习模型。为确保数据科学家能够访问存储在Amazon S3中用于训练模型的数据集，同时遵循监管要求（训练所用实例与服务的数据传输不得经由互联网），机器学习专家应采取哪两项措施实现此目标？（请选择两项）"
     },
     "option": [
       {
@@ -1813,7 +1813,7 @@
       }
     ],
     "analysis": {
-      "enus": "正确答案为前两个选项，因为它们提供了安全、可扩展且经济高效的方法，能够仅将亚马逊Redshift中的部分数据导出至亚马逊S3。  \n\n**正确答案一：** 使用预置Spark镜像的分布式SageMaker处理作业是高效方案，它通过多实例并行扩展处理海量数据，避免不必要地移动全部10TB数据，并直接将结果写入S3。  \n\n**正确答案二：** 通过Secrets管理器管理凭证，在SageMaker Studio笔记本中使用Python适配器直接查询Redshift，该方案安全且经济，仅提取所需数据而无需在本地下载完整数据集。  \n\n**错误选项排除原因：**  \n- **错误一：** 将10TB数据全部下载至笔记本集群既不符合成本效益，也会受存储和网络限制影响实操性。  \n- **错误二：** 选用本地存储超过10TB的超大型笔记本方案成本极高，且在仅需部分数据时显得多余。  \n- **错误三：** 单靠SageMaker Data Wrangler无法原生支持此规模下的Redshift至S3直接导出，它更侧重于数据准备与分析，而非批量导出操作。  \n\n核心原则在于避免全量数据传输，充分利用可扩展的无服务器或分布式方法进行数据子集提取。",
+      "enus": "正确答案为前两个选项，因为它们提供了安全、可扩展且经济高效的方法，能够仅将亚马逊Redshift中的部分数据导出至Amazon S3。  \n\n**正确答案一：** 使用预置Spark镜像的分布式SageMaker处理作业是高效方案，它通过多实例并行扩展处理海量数据，避免不必要地移动全部10TB数据，并直接将结果写入S3。  \n\n**正确答案二：** 通过Secrets管理器管理凭证，在SageMaker Studio笔记本中使用Python适配器直接查询Redshift，该方案安全且经济，仅提取所需数据而无需在本地下载完整数据集。  \n\n**错误选项排除原因：**  \n- **错误一：** 将10TB数据全部下载至笔记本集群既不符合成本效益，也会受存储和网络限制影响实操性。  \n- **错误二：** 选用本地存储超过10TB的超大型笔记本方案成本极高，且在仅需部分数据时显得多余。  \n- **错误三：** 单靠SageMaker Data Wrangler无法原生支持此规模下的Redshift至S3直接导出，它更侧重于数据准备与分析，而非批量导出操作。  \n\n核心原则在于避免全量数据传输，充分利用可扩展的无服务器或分布式方法进行数据子集提取。",
       "zhcn": "好的，我们先来逐项分析每个选项的优缺点，并判断其是否满足题目要求：**安全、成本效益高、将相关数据从 Amazon Redshift 导出到 S3**。  \n\n---\n\n**题目关键信息**  \n- 数据量：10 TB（但只有一部分与建模相关）  \n- 当前数据在 Redshift  \n- 团队用 SageMaker Studio 做分析和建模  \n- 需要把相关数据导出到 S3  \n- 要求：安全、成本低  \n\n---\n\n### **选项 A**  \n> 启动多个中型实例的分布式 SageMaker Processing 作业，使用预构建的 Apache Spark Docker 镜像查询、绘图并导出数据到 S3。  \n\n- SageMaker Processing 适合分布式数据处理，能直接读取 Redshift 数据，处理完后写入 S3。  \n- 使用预置镜像，安全可控（IAM 角色管理权限）。  \n- 按作业运行时间计费，不需要长期运行笔记本，比长期运行笔记本成本低。  \n- 但题目要求选择两个，这个选项看起来可行，但需要确认是否比 E 更优。  \n\n---\n\n### **选项 B**  \n> 启动多个中型笔记本实例，用 PySpark 分布式模式，从 Redshift 下载数据到笔记本集群，再导出到 S3。  \n\n- 问题：笔记本实例是长期运行的，即使配置成集群，也需要手动管理，且把 10 TB 中的相关数据先拉到笔记本本地/集群存储，再上传 S3，效率低、存储成本高、网络传输多。  \n- 不符合“成本效益高”，因为笔记本实例是按小时计费，且需要大存储空间。  \n- 安全上不如用 Processing 或 Data Wrangler 直接对接数据源。  \n\n**排除**。  \n\n---\n\n### **选项 C**  \n> 用 Secrets Manager 存 Redshift 凭据，在 SageMaker Studio 笔记本里用 Python 适配器连接 Redshift，查询并导出数据到 S3。  \n\n- 可行，但要注意：如果数据量大，在笔记本里直接拉取会受单机内存限制。  \n- 但题目说“只有一部分数据相关”，可能这部分数据可以适合单机处理。  \n- 安全：Secrets Manager 安全存储凭据。  \n- 成本：用 Studio 笔记本按使用时间计费，比长期运行 notebook instance 便宜，但处理大数据时可能效率低。  \n- 不过，这种方式是数据工程师常用方法，简单直接，对于“子集”数据可行。  \n\n**可能保留**。  \n\n---\n\n### **选项 D**  \n> 用 Secrets Manager 存凭据，启动一个超大笔记本实例，挂载比 10 TB 稍大的块存储，下载、查询、绘图，再导出到 S3。  \n\n- 明显不经济：为 10 TB 数据准备本地存储，即使只取一部分，也可能需要很大存储（如果子集仍很大）。  \n- 超大笔记本实例 + 大容量 EBS 很贵，且单机处理大数据效率低。  \n- 不符合“成本效益高”。  \n\n**排除**。  \n\n---\n\n### **选项 E**  \n> 用 SageMaker Data Wrangler 查询、绘图并导出数据到 S3。  \n\n- Data Wrangler 可以直接连接 Redshift，用可视化或代码方式选择需要的列/行（子集），然后导出到 S3。  \n- 底层用 SageMaker Processing 作业来执行数据移动，分布式、按需运行、成本低。  \n- 安全：通过 IAM 和可选的 Secrets Manager 管理 Redshift 访问。  \n- 专门为这种数据准备和特征工程场景设计，符合要求。  \n\n**保留**。  \n\n---\n\n### **比较 A 与 C、E**  \n- **A**：手动写 Processing 作业，用 Spark 镜像，可行，但比 Data Wrangler（E）更底层，Data Wrangler 更快捷且也利用 Processing 作业。  \n- **C**：在 Studio 笔记本里用 Python 直接导出，适合数据子集不大的情况，简单灵活。  \n- **E**：更集成化，适合数据准备流程，且能处理较大数据（通过后台分布式作业）。  \n\n题目是数据工程团队需要安全、成本低的方法，两个答案应选：  \n- **E**（Data Wrangler，集成方案，成本低）  \n- **C**（笔记本直接连接，对于子集数据可行，成本也较低，不需要长期资源）  \n\nA 虽然可行，但不如 E 省事（E 是托管流程），且题目可能倾向于选更典型或更优的两个方案。  \n\n官方答案给的是 **C 和 E**。  \n\n---\n\n**最终答案**：  \n**[C]** 和 **[E]** ✅"
     },
     "answer": "CE",
@@ -1828,14 +1828,14 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "亚马逊Transcribe自定义词汇增强版",
+          "zhcn": "Amazon Transcribe自定义词汇增强版",
           "enus": "Amazon Transcribe with custom vocabularies"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "借助定制语言模型的亚马逊转录服务",
+          "zhcn": "借助定制语言模型的Amazon Transcribe服务",
           "enus": "Amazon Transcribe with custom language models"
         },
         "option_flag": true
@@ -1856,7 +1856,7 @@
       },
       {
         "option_text": {
-          "zhcn": "亚马逊翻译",
+          "zhcn": "Amazon Translate",
           "enus": "Amazon Translate"
         },
         "option_flag": true
@@ -1885,7 +1885,7 @@
       },
       {
         "option_text": {
-          "zhcn": "配置SageMaker模型监控器时需设定精度阈值以检测模型漂移。当数据超出阈值范围时，将触发Amazon CloudWatch告警。通过将SageMaker Pipelines工作流与CloudWatch告警关联，即可在监测到异常时自动启动模型重训练流程。",
+          "zhcn": "配置SageMaker Model Monitor时需设定精度阈值以检测模型漂移。当数据超出阈值范围时，将触发Amazon CloudWatch告警。通过将SageMaker Pipelines工作流与CloudWatch告警关联，即可在监测到异常时自动启动模型重训练流程。",
           "enus": "Configure SageMaker Model Monitor with an accuracy threshold to check for model drift. Initiate an Amazon CloudWatch alarm when  the threshold is exceeded. Connect the workfiow in SageMaker Pipelines with the CloudWatch alarm to automatically initiate retraining."
         },
         "option_flag": true
@@ -1985,14 +1985,14 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "类别失衡",
+          "zhcn": "类别不平衡",
           "enus": "Class imbalance"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "条件性人口差异",
+          "zhcn": "条件人口统计差异",
           "enus": "Conditional demographic disparity"
         },
         "option_flag": false
@@ -2006,21 +2006,21 @@
       },
       {
         "option_text": {
-          "zhcn": "詹森-香农散度",
+          "zhcn": "Jensen-Shannon 散度",
           "enus": "Jensen-Shannon divergence"
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "Kullback-Leieber散度",
+          "zhcn": "Kullback-Leibler 散度",
           "enus": "Kullback-Leibler divergence"
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "“全变差距离”",
+          "zhcn": "总变分距离",
           "enus": "Total variation distance"
         },
         "option_flag": true
@@ -2037,7 +2037,7 @@
     "id": "229",
     "question": {
       "enus": "An online retail company wants to develop a natural language processing (NLP) model to improve customer service. A machine learning (ML) specialist is setting up distributed training of a Bidirectional Encoder Representations from Transformers (BERT) model on Amazon SageMaker. SageMaker will use eight compute instances for the distributed training. The ML specialist wants to ensure the security of the data during the distributed training. The data is stored in an Amazon S3 bucket. Which combination of steps should the ML specialist take to protect the data during the distributed training? (Choose three.) ",
-      "zhcn": "一家网络零售公司计划开发自然语言处理模型以提升客户服务质量。一位机器学习专家正在Amazon SageMaker平台上配置双向Transformer编码器模型的分布式训练任务。该训练将启用八个计算实例。为确保分布式训练期间的数据安全（训练数据存储于亚马逊S3存储桶中），机器学习专家应采取哪三项组合措施？（请选择三项）"
+      "zhcn": "一家网络零售公司计划开发自然语言处理模型以提升客户服务质量。一位机器学习专家正在Amazon SageMaker平台上配置双向Transformer编码器模型的分布式训练任务。该训练将启用八个计算实例。为确保分布式训练期间的数据安全（训练数据存储于Amazon S3存储桶中），机器学习专家应采取哪三项组合措施？（请选择三项）"
     },
     "option": [
       {
@@ -2094,7 +2094,7 @@
     "id": "231",
     "question": {
       "enus": "An ecommerce company is collecting structured data and unstructured data from its website, mobile apps, and IoT devices. The data is stored in several databases and Amazon S3 buckets. The company is implementing a scalable repository to store structured data and unstructured data. The company must implement a solution that provides a central data catalog, self-service access to the data, and granular data access policies and encryption to protect the data. Which combination of actions will meet these requirements with the LEAST amount of setup? (Choose three.) ",
-      "zhcn": "一家电商企业正从其官方网站、移动应用及物联网设备中采集结构化与非结构化数据。这些数据目前存储于多个数据库及亚马逊S3存储桶中。该公司正在构建一个可扩展的数据存储库，用以统一存储两类数据。此方案需实现三大核心功能：建立统一数据目录、提供自助式数据查询服务、实施细粒度数据访问策略及加密保护机制。请问以下哪三项措施的组合能以最简配置满足上述需求？（请选择三项答案）"
+      "zhcn": "一家电商企业正从其官方网站、移动应用及物联网设备中采集结构化与非结构化数据。这些数据目前存储于多个数据库及Amazon S3存储桶中。该公司正在构建一个可扩展的数据存储库，用以统一存储两类数据。此方案需实现三大核心功能：建立统一数据目录、提供自助式数据查询服务、实施细粒度数据访问策略及加密保护机制。请问以下哪三项措施的组合能以最简配置满足上述需求？（请选择三项答案）"
     },
     "option": [
       {
@@ -2315,7 +2315,7 @@
     "id": "256",
     "question": {
       "enus": "A company is creating an application to identify, count, and classify animal images that are uploaded to the company’s website. The company is using the Amazon SageMaker image classification algorithm with an ImageNetV2 convolutional neural network (CNN). The solution works well for most animal images but does not recognize many animal species that are less common. The company obtains 10,000 labeled images of less common animal species and stores the images in Amazon S3. A machine learning (ML) engineer needs to incorporate the images into the model by using Pipe mode in SageMaker. Which combination of steps should the ML engineer take to train the model? (Choose two.) ",
-      "zhcn": "某公司正在开发一款应用程序，用于识别、计数和分类用户上传至其网站的动物图像。该公司采用Amazon SageMaker图像分类算法，并搭配ImageNetV2卷积神经网络（CNN）架构。该解决方案对大多数常见动物图像识别效果良好，但对许多较为罕见的动物物种却难以辨识。公司现已获取一万张稀有动物物种的标注图像，并存储于亚马逊S3服务中。机器学习工程师需通过SageMaker的Pipe模式将这些图像数据整合到模型中。请问该工程师应采取哪两种步骤组合来完成模型训练？（请选择两项正确答案）"
+      "zhcn": "某公司正在开发一款应用程序，用于识别、计数和分类用户上传至其网站的动物图像。该公司采用Amazon SageMaker图像分类算法，并搭配ImageNetV2卷积神经网络（CNN）架构。该解决方案对大多数常见动物图像识别效果良好，但对许多较为罕见的动物物种却难以辨识。公司现已获取一万张稀有动物物种的标注图像，并存储于Amazon S3服务中。机器学习工程师需通过SageMaker的Pipe模式将这些图像数据整合到模型中。请问该工程师应采取哪两种步骤组合来完成模型训练？（请选择两项正确答案）"
     },
     "option": [
       {
@@ -2565,7 +2565,7 @@
     "id": "284",
     "question": {
       "enus": "A company is building custom deep learning models in Amazon SageMaker by using training and inference containers that run on Amazon EC2 instances. The company wants to reduce training costs but does not want to change the current architecture. The SageMaker training job can finish after interruptions. The company can wait days for the results. Which combination of resources should the company use to meet these requirements MOST cost-effectively? (Choose two.) ",
-      "zhcn": "某公司正通过运行在亚马逊EC2实例上的训练与推理容器，在Amazon SageMaker中构建定制深度学习模型。公司希望降低训练成本，但需维持现有架构不变。当前SageMaker训练任务在中断后仍可完成，且公司能够接受数日的结果等待周期。要最高性价比地满足这些需求，应选择哪两种资源组合？（请选择两项）"
+      "zhcn": "某公司正通过运行在Amazon EC2实例上的训练与推理容器，在Amazon SageMaker中构建定制深度学习模型。公司希望降低训练成本，但需维持现有架构不变。当前SageMaker训练任务在中断后仍可完成，且公司能够接受数日的结果等待周期。要最高性价比地满足这些需求，应选择哪两种资源组合？（请选择两项）"
     },
     "option": [
       {
@@ -2822,7 +2822,7 @@
     "id": "296",
     "question": {
       "enus": "A retail company stores 100 GB of daily transactional data in Amazon S3 at periodic intervals. The company wants to identify the schema of the transactional data. The company also wants to perform transformations on the transactional data that is in Amazon S3. The company wants to use a machine learning (ML) approach to detect fraud in the transformed data. Which combination of solutions will meet these requirements with the LEAST operational overhead? (Choose three.) ",
-      "zhcn": "一家零售企业定期将每日100 GB的交易数据存储于亚马逊S3中。该公司需要明确这些交易数据的结构模式，并对其中的数据进行转换处理。此外，企业还希望采用机器学习方法，在转换后的数据中实现欺诈行为检测。若要同时满足这些需求且将运维负担降至最低，应选择哪三种解决方案的组合？（请选出三项。）"
+      "zhcn": "一家零售企业定期将每日100 GB的交易数据存储于Amazon S3中。该公司需要明确这些交易数据的结构模式，并对其中的数据进行转换处理。此外，企业还希望采用机器学习方法，在转换后的数据中实现欺诈行为检测。若要同时满足这些需求且将运维负担降至最低，应选择哪三种解决方案的组合？（请选出三项。）"
     },
     "option": [
       {
@@ -2929,7 +2929,7 @@
     "id": "301",
     "question": {
       "enus": "A machine learning (ML) specialist is using the Amazon SageMaker DeepAR forecasting algorithm to train a model on CPU-based Amazon EC2 On-Demand instances. The model currently takes multiple hours to train. The ML specialist wants to decrease the training time of the model. Which approaches will meet this requirement? (Choose two.) ",
-      "zhcn": "一位机器学习专家正利用基于CPU的亚马逊EC2按需实例，通过Amazon SageMaker平台的DeepAR预测算法训练模型。当前模型训练耗时数小时之久。该专家希望缩短模型训练时长，下列哪两种方法可实现此目标？（请选择两项正确答案）"
+      "zhcn": "一位机器学习专家正利用基于CPU的Amazon EC2按需实例，通过Amazon SageMaker平台的DeepAR预测算法训练模型。当前模型训练耗时数小时之久。该专家希望缩短模型训练时长，下列哪两种方法可实现此目标？（请选择两项正确答案）"
     },
     "option": [
       {
@@ -3084,21 +3084,21 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "精准",
+          "zhcn": "Specificity",
           "enus": "Specificity"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "误报率",
+          "zhcn": "误报率(False positive rate)",
           "enus": "False positive rate"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "精确",
+          "zhcn": "Accuracy",
           "enus": "Accuracy"
         },
         "option_flag": false
@@ -3112,7 +3112,7 @@
       },
       {
         "option_text": {
-          "zhcn": "真阳性率",
+          "zhcn": "真阳性率(True positive rate)",
           "enus": "True positive rate"
         },
         "option_flag": true
@@ -3134,8 +3134,8 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "采用目标检测算法训练模型，用于识别照片中的腐蚀区域。最高赞方案",
-          "enus": "Use an object detection algorithm to train a model to identify corrosion areas of a photo. Most Voted"
+          "zhcn": "采用目标检测算法训练模型，用于识别照片中的腐蚀区域。",
+          "enus": "Use an object detection algorithm to train a model to identify corrosion areas of a photo."
         },
         "option_flag": true
       },
@@ -3155,15 +3155,15 @@
       },
       {
         "option_text": {
-          "zhcn": "采用XGBoost算法训练模型，对照片中的腐蚀程度进行等级分类。最高票选方案。",
-          "enus": "Use an XGBoost algorithm to train a model to classify the severity of corrosion in a photo. Most Voted"
+          "zhcn": "采用XGBoost算法训练模型，对照片中的腐蚀程度进行等级分类。",
+          "enus": "Use an XGBoost algorithm to train a model to classify the severity of corrosion in a photo."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "对含有腐蚀痕迹的照片进行图像增强处理。最多赞同",
-          "enus": "Perform image augmentation on photos that contain corrosion. Most Voted"
+          "zhcn": "对含有腐蚀痕迹的照片进行图像增强处理。",
+          "enus": "Perform image augmentation on photos that contain corrosion."
         },
         "option_flag": true
       },
@@ -3192,21 +3192,21 @@
       {
         "option_text": {
           "zhcn": "为构建客户流失预测模型，需明确特征变量与目标变量。",
-          "enus": "Define the feature variables and target variable for the churn prediction model. Most Voted"
+          "enus": "Define the feature variables and target variable for the churn prediction model."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "运用SOL EXPLAIN_MODEL函数执行预测分析。",
-          "enus": "Use the SOL EXPLAIN_MODEL function to run predictions."
+          "zhcn": "运用SQL EXPLAIN_MODEL函数执行预测分析。",
+          "enus": "Use the SQL EXPLAIN_MODEL function to run predictions."
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "编写一条创建模型的CREATE MODEL SQL语句。最高票选方案",
-          "enus": "Write a CREATE MODEL SQL statement to create a model. Most Voted"
+          "zhcn": "编写一条创建模型的CREATE MODEL SQL语句。",
+          "enus": "Write a CREATE MODEL SQL statement to create a model."
         },
         "option_flag": true
       },
@@ -3226,8 +3226,8 @@
       },
       {
         "option_text": {
-          "zhcn": "运用SQL预测函数执行数据推演，采纳最高票选结果。",
-          "enus": "Use the SQL prediction function to run predictions. Most Voted"
+          "zhcn": "运用SQL预测函数执行数据推演。",
+          "enus": "Use the SQL prediction function to run predictions."
         },
         "option_flag": true
       }
@@ -3255,28 +3255,28 @@
       },
       {
         "option_text": {
-          "zhcn": "均方误差（MSE） 获赞最多",
-          "enus": "Mean squared error (MSE) Most Voted"
+          "zhcn": "均方误差（MSE）",
+          "enus": "Mean squared error (MSE)"
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "均方根误差（RMSE） 获赞最多",
-          "enus": "Root mean squared error (RMSE) Most Voted"
+          "zhcn": "均方根误差（RMSE）",
+          "enus": "Root mean squared error (RMSE)"
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "精准",
+          "zhcn": "Precision",
           "enus": "Precision"
         },
         "option_flag": false
       },
       {
         "option_text": {
-          "zhcn": "精准",
+          "zhcn": "Accuracy",
           "enus": "Accuracy"
         },
         "option_flag": false
@@ -3319,15 +3319,15 @@
       },
       {
         "option_text": {
-          "zhcn": "重新初始化卷积神经网络末层全连接层的权重参数，并采用新版对象集对网络进行分类任务的再训练。最高票当选方案。",
-          "enus": "Reinitialize the weights of the last fully connected layer of the CNN. Retrain the CNN on the classification task by using the new set of objects. Most Voted"
+          "zhcn": "重新初始化卷积神经网络末层全连接层的权重参数，并采用新版对象集对网络进行分类任务的再训练。",
+          "enus": "Reinitialize the weights of the last fully connected layer of the CNN. Retrain the CNN on the classification task by using the new set of objects."
         },
         "option_flag": true
       },
       {
         "option_text": {
-          "zhcn": "重新初始化循环神经网络最后一层的权重参数，并基于新增对象集对模型进行预测任务的完整重训练。采纳最高票选方案。",
-          "enus": "Reinitialize the weights of the last layer of the RNN. Retrain the entire model on the prediction task by using the new set of objects. Most Voted"
+          "zhcn": "重新初始化循环神经网络最后一层的权重参数，并基于新增对象集对模型进行预测任务的完整重训练。",
+          "enus": "Reinitialize the weights of the last layer of the RNN. Retrain the entire model on the prediction task by using the new set of objects."
         },
         "option_flag": true
       }
@@ -3362,7 +3362,7 @@
       },
       {
         "option_text": {
-          "zhcn": "增添特定领域的新功能，采用更复杂的模型架构。",
+          "zhcn": "增添特定领域的新特征，采用更复杂的模型架构。",
           "enus": "Add new domain-specific features. Use more complex models."
         },
         "option_flag": true
@@ -3376,8 +3376,8 @@
       },
       {
         "option_text": {
-          "zhcn": "减少训练数据样本的数量。降低对现有训练数据的遍历次数。AC（100%）",
-          "enus": "Decrease the amount of training data examples. Reduce the number of passes on the existing training data.  AC (100%)"
+          "zhcn": "减少训练数据样本的数量。降低对现有训练数据的遍历次数。",
+          "enus": "Decrease the amount of training data examples. Reduce the number of passes on the existing training data."
         },
         "option_flag": false
       }
@@ -3398,7 +3398,7 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "采用亚马逊 Forecast Prophet 模型进行建模。",
+          "zhcn": "采用Amazon Forecast Prophet 模型进行建模。",
           "enus": "Develop the model by using the Amazon Forecast Prophet model."
         },
         "option_flag": false
@@ -3426,8 +3426,8 @@
       },
       {
         "option_text": {
-          "zhcn": "采用Amazon SageMaker与AWS Step Functions服务，通过A/B测试策略部署模型。流量分配比例为BC版本67%，BE版本33%。",
-          "enus": "Deploy the model by using an A/B testing strategy that uses Amazon SageMaker and AWS Step Functions.  BC (67%)  BE (33%)"
+          "zhcn": "采用Amazon SageMaker与AWS Step Functions服务，通过A/B测试策略部署模型。",
+          "enus": "Deploy the model by using an A/B testing strategy that uses Amazon SageMaker and AWS Step Functions."
         },
         "option_flag": false
       }
