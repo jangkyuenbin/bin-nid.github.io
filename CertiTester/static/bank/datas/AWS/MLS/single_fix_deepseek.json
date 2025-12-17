@@ -5877,7 +5877,7 @@
       },
       {
         "option_text": {
-          "zhcn": "先知",
+          "zhcn": "Prophet",
           "enus": "Prophet"
         },
         "option_flag": false
@@ -7891,7 +7891,7 @@
       },
       {
         "option_text": {
-          "zhcn": "**SageMaker 数据处理服务**",
+          "zhcn": "SageMaker Processing",
           "enus": "SageMaker Processing"
         },
         "option_flag": false
@@ -10938,7 +10938,7 @@
       {
         "option_text": {
           "zhcn": "通过自动模型调优（AMT）对csv_weight超参数与scale_pos_weight超参数进行调校。优化目标设定为：{\"HyperParameterTuningJobObjective\": {\"MetricName\": \"validation'll\", \"Type\": \"Maximize\"}}。",
-          "enus": "Tune the csv_weight hyperparameter and the scale_pos_weight hyperparameter by using automatic model tuning (AMT). Optimize on  {\"HyperParameterTuningJobObjective\": {\"MetricName\": \"validation'll\", \"Type\": \"Maximize\"}}."
+          "enus": "Tune the csv_weight hyperparameter and the scale_pos_weight hyperparameter by using automatic model tuning (AMT). Optimize on  {\"HyperParameterTuningJobObjective\": {\"MetricName\": \"validation:f1\", \"Type\": \"Maximize\"}}."
         },
         "option_flag": true
       },
@@ -11403,7 +11403,7 @@
     "option": [
       {
         "option_text": {
-          "zhcn": "\"Amazon S3 跨区域复制（CRR）功能\"",
+          "zhcn": "Amazon S3 跨区域复制（CRR）功能",
           "enus": "Amazon S3 with S3 Cross-Region Replication (CRR)"
         },
         "option_flag": true
